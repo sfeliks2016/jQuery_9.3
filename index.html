@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>    
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
+    <!-- JavaScript dla slider 2 -->
+    <script type="text/javascript">
+         var i = 0, images = ["img/photo1.jpeg",
+             "img/photo2.jpeg",
+             "img/photo3.jpeg",
+             "img/photo4.jpg",
+             "img/photo6.jpg"];
+    
+        function mySlide(param)
+            {
+                if(param === 'next')
+                    {
+                        i++;
+                        if(i === images.length)
+                            {i = images.length - 1}
+                    }else {
+                        i--;
+                        if(i < 0)
+                            {i = 0;}
+                    }
+                    document.getElementById('slide').src = images[i];
+            }    
+    </script>
+</head>
+<body>
+  <div class="container">
+   <!-- Slider 1 -->
+    <div class="header">
+       <h1>Slider 1</h1>
+    </div>
+    <div id="carousel">
+      <ul>
+        <li><img src="img/photo1.jpeg"  alt=""></li>
+        <li><img src="img/photo2.jpeg"  alt=""></li>
+        <li><img src="img/photo4.jpg"  alt=""></li>
+        <li><img src="img/photo6.jpg"  alt=""></li>
+        <li><img src="img/photo5.jpg"  alt=""></li>
+      </ul>
+    </div>
+    <button id="toggle1">info</button>
+    <p class="one">slider 1 - interwal co 2s, metoda mouseenter, mouseleave </p>
+    <!-- Slider 2 -->
+    <div class="header">
+       <h1>Slider 2</h1>
+    </div>
+    <div id="carousel2">
+        <div id="nextbutton" onclick="mySlide('next');">&rang;</div>
+        <div id="prevbutton" onclick="mySlide('prev');">&lang;</div>
+         <img src="img/photo1.jpeg" id="slide" alt="" width="400" height="300">
+     </div>
+     <button id="toggle2">info</button>
+     <p class="two">slider 2 - czysty JavaScript i CSS. metoda hover dla prev oraz next, brak interwalu. </p>
+  </div>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
