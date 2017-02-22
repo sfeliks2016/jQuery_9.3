@@ -1,0 +1,122 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    text-align: center; 
+    width: 400px;
+    margin: 0 auto;
+}
+
+#carousel {
+    width: 400px;
+    height: 300px;
+	overflow: hidden;
+    margin: 0 auto;
+    cursor: pointer;
+    position: relative;
+}
+
+#carousel2 {
+    width: 400px;
+    height: 300px;
+	overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+ul {
+    display: block;
+    width: 2000px;
+    height: 300px;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    float: left;
+    width: 400px;
+    list-style-type: none;
+    width: 400px;
+    height: 300px;
+     margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 400px;
+    height: 300px;
+}
+
+#nextbutton {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(183,0,3,0.5);
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    position: absolute;
+    top: 125px;
+    /* height of the image slider divided by 2 (500/2 = 250), minus the height of the prev/next button divided by 2 (50/2 = 250), then 250 - 25 = 225px*/
+    right: 0;
+    z-index: 99;
+    cursor: pointer;
+    opacity: 0;
+}
+
+#prevbutton {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(183,0,3,0.5);
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    position: absolute;
+    top: 125px;
+    /* height of the image slider divided by 2 (500/2 = 250), minus the height of the prev/next button divided by 2 (50/2 = 250), then 250 - 25 = 225px*/
+    left: 0;
+    z-index: 99;
+    cursor: pointer;
+    opacity: 0;
+}
+
+#carousel2:hover #nextbutton, #carousel2:hover #prevbutton {
+    opacity: 1;
+    transition: all .5s ease-out;
+    -webkit-transition: all .5s ease-out;    
+}
+
+button {
+    margin-top: 10px;
+}
+
+p.one {
+    display: none;
+    position: absolute;
+    top: 284px;
+    color: #fff;
+    font-size: 20px;
+    background-color: #222;
+    width: 400px;
+    padding: 10px;
+    
+}
+
+p.two {
+    display: none;
+    position: absolute;
+    top: 663px;
+    color: #fff;
+    font-size: 20px;
+    background-color: #222;
+    width: 400px;
+    padding: 10px;
+    
+}
+
+.header {
+    min-height: 50px;
+    line-height: 50px;
+}
